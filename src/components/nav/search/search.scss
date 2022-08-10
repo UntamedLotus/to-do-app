@@ -10,6 +10,24 @@ input {
   font-size: 17px;
   width: 30rem;
   justify-self: stretch;
+
+  box-shadow: 5px 5px 5px rgb(189, 62, 189);
+}
+
+input:focus {
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+
+  padding: 10px;
+  padding-left: 15px;
+  margin-left: -2rem;
+
+  font-size: 17px;
+  width: 30rem;
+  justify-self: stretch;
+
+  box-shadow: 5px 5px 5px rgb(189, 62, 189);
 }
 
 button {
@@ -19,4 +37,10 @@ button {
   height: 2.2rem;
   width: 2.2rem;
   margin-left: 1.2rem;
+
+  box-shadow: 5px 5px 5px rgb(189, 62, 189);
+
+  .icon {
+    text-align: center;
+  }
 }
