@@ -2,10 +2,21 @@ input {
   background-color: #fff;
   border: none;
   border-radius: 20px;
-  margin-top: 2rem;
+
   padding: 10px;
   padding-left: 15px;
+  margin-left: -2rem;
+
   font-size: 17px;
-  width: 40%;
-  justify-self: left;
+  width: 30rem;
+  justify-self: stretch;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-left: 1.2rem;
 }

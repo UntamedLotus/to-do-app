@@ -9,9 +9,9 @@ const CurrentDate = () => {
 
   return (
     <div className="day">
-      <p className="year">{year}</p>
-      <p className="month">{month + 1}</p>
       <p className="date">{date}</p>
+      <p className="month">{month + 1}</p>
+      <p className="year">{year}</p>
     </div>
   );
 };
