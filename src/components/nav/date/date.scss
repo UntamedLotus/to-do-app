@@ -1,0 +1,14 @@
+.day {
+  display: flex;
+  gap: 0.5rem;
+  justify-self: right;
+  margin-right: 2.5rem;
+}
+
+.year,
+.month,
+.date {
+  background-color: #fff;
+  padding: 0.7rem;
+  border-radius: 5px;
+}

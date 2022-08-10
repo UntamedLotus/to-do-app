@@ -1,0 +1,19 @@
+import React from "react";
+import "./date.scss";
+
+const CurrentDate = () => {
+  const day = new Date();
+  const year = day.getFullYear();
+  const month = day.getMonth();
+  const date = day.getDate();
+
+  return (
+    <div className="day">
+      <p className="year">{year}</p>
+      <p className="month">{month + 1}</p>
+      <p className="date">{date}</p>
+    </div>
+  );
+};
+
+export default CurrentDate;
