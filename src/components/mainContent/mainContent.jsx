@@ -1,18 +1,23 @@
 import React from "react";
 import "./mainContent.scss";
+import { IoCloseCircleOutline } from "react-icons/io5";
+import { IoBookmarkOutline } from "react-icons/io5";
+import { IoBookmark } from "react-icons/io5";
 
-const MainContent = () => {
-  return (
-    <div className="maincontent">
-      <h1>HelloWorld</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ut, omnis
-        aut magnam obcaecati amet consequatur ullam quod fuga accusantium facere
-        repudiandae corporis dolore a dicta iure aspernatur, perferendis
-        nostrum.
-      </p>
+const MainContent = ({ tasks, deleteTask, handleImportant, important }) => {
+  const taskUI = tasks.map((task) => (
+    <div className="tasklist" key={task.id}>
+      <p>{task.taskName}</p>
+      <span onClick={() => deleteTask(task.id)}>
+        <IoCloseCircleOutline />
+      </span>
+      <span onClick={() => handleImportant(task.id)}>
+        {important === true ? <IoBookmark /> : <IoBookmarkOutline />}
+      </span>
     </div>
-  );
+  ));
+
+  return <div className="maincontent">{taskUI}</div>;
 };
 
 export default MainContent;

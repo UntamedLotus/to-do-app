@@ -1,14 +1,10 @@
 import "./App.scss";
-import MainContent from "./components/mainContent/mainContent";
-import Nav from "./components/nav/nav";
+import ToDoList from "./components/to-do-list";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Nav />
-        <MainContent />
-      </header>
+      <ToDoList />
     </div>
   );
 }
