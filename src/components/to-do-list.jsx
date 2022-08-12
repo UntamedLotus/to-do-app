@@ -17,6 +17,7 @@ const ToDoList = () => {
   const [taskName, setTaskName] = React.useState("");
   const [id, setId] = React.useState("");
   const [tasks, setTasks] = React.useState(collectedInfo());
+  const [todo, setTodo] = React.useState(false);
 
   // Saving Data
   React.useEffect(() => {
@@ -32,6 +33,14 @@ const ToDoList = () => {
       return element.id !== id;
     });
     setTasks(filteredTasks);
+  };
+
+  const completedtask = (id) => {
+    const filteredTasks = tasks.filter((element, index) => {
+      return element.id !== id;
+    });
+    setTasks(filteredTasks);
+    setTodo(true);
   };
 
   const onSubmit = function (e) {
@@ -59,6 +68,8 @@ const ToDoList = () => {
         handleTaskChange={handleTaskChange}
         deleteTask={deleteTask}
         tasks={tasks}
+        completedtask={completedtask}
+        todo={todo}
       />
     </div>
   );
