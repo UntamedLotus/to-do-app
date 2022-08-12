@@ -17,7 +17,6 @@ const ToDoList = () => {
   const [taskName, setTaskName] = React.useState("");
   const [id, setId] = React.useState("");
   const [tasks, setTasks] = React.useState(collectedInfo());
-  const [important, setImportant] = React.useState(false);
 
   // Saving Data
   React.useEffect(() => {
@@ -49,10 +48,6 @@ const ToDoList = () => {
     setId("");
   };
 
-  const handleImportant = () => {
-    setImportant((important) => !important);
-  };
-
   return (
     <div className="todolist">
       <Nav
@@ -64,12 +59,11 @@ const ToDoList = () => {
         handleTaskChange={handleTaskChange}
         deleteTask={deleteTask}
         tasks={tasks}
-        taskName={taskName}
-        handleImportant={handleImportant}
-        important={important}
       />
     </div>
   );
 };
 
 export default ToDoList;
+
+//
