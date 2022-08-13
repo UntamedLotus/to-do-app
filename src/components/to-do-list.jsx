@@ -1,6 +1,8 @@
 import React from "react";
 import MainContent from "./mainContent/mainContent";
 import Nav from "./mainContent/nav/nav";
+
+import Confetti from "react-confetti";
 import { nanoid } from "nanoid";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -28,6 +30,7 @@ const ToDoList = () => {
   const card = () => {
     return (
       <div className="card">
+        {status && <Confetti width={670} height={500} />}
         <h2>task completed</h2>
         <span className="closebtn" onClick={closeScreen}>
           <IoCloseCircleOutline />
