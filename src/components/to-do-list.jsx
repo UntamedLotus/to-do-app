@@ -2,7 +2,9 @@ import React from "react";
 import MainContent from "./mainContent/mainContent";
 import Nav from "./mainContent/nav/nav";
 import { nanoid } from "nanoid";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
+import "./to-do-list.scss";
 // Fetching Data
 const collectedInfo = () => {
   const info = localStorage.getItem("tasks");
@@ -17,7 +19,22 @@ const ToDoList = () => {
   const [taskName, setTaskName] = React.useState("");
   const [id, setId] = React.useState("");
   const [tasks, setTasks] = React.useState(collectedInfo());
-  const [todo, setTodo] = React.useState(false);
+  const [status, setStatus] = React.useState(false);
+
+  const closeScreen = function () {
+    setStatus(false);
+  };
+
+  const card = () => {
+    return (
+      <div className="card">
+        <h2>task completed</h2>
+        <span className="closebtn" onClick={closeScreen}>
+          <IoCloseCircleOutline />
+        </span>
+      </div>
+    );
+  };
 
   // Saving Data
   React.useEffect(() => {
@@ -40,7 +57,7 @@ const ToDoList = () => {
       return element.id !== id;
     });
     setTasks(filteredTasks);
-    setTodo(true);
+    setStatus(true);
   };
 
   const onSubmit = function (e) {
@@ -64,17 +81,18 @@ const ToDoList = () => {
         onSubmit={onSubmit}
         taskName={taskName}
       />
-      <MainContent
-        handleTaskChange={handleTaskChange}
-        deleteTask={deleteTask}
-        tasks={tasks}
-        completedtask={completedtask}
-        todo={todo}
-      />
+      {status === true ? (
+        card()
+      ) : (
+        <MainContent
+          handleTaskChange={handleTaskChange}
+          deleteTask={deleteTask}
+          completedtask={completedtask}
+          tasks={tasks}
+        />
+      )}
     </div>
   );
 };
 
 export default ToDoList;
-
-//

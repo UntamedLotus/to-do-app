@@ -3,16 +3,21 @@ import "./mainContent.scss";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
-const MainContent = ({ tasks, deleteTask, completedtask, todo }) => {
+const MainContent = ({ tasks, deleteTask, completedtask }) => {
   const taskUI = tasks.map((task) => (
-    <div className="tasklist" key={task.id}>
-      <p>{task.taskName}</p>
-      <span>
-        <IoCheckmarkCircleOutline onClick={() => completedtask(task.id)} />
-      </span>
-      <span onClick={() => deleteTask(task.id)}>
-        <IoCloseCircleOutline />
-      </span>
+    <div>
+      <div className="tasklist" key={task.id}>
+        <p>{task.taskName}</p>
+        <div className="icon">
+          <span className="btn-close">
+            <IoCheckmarkCircleOutline onClick={() => completedtask(task.id)} />
+          </span>
+          <span className="btn-complete" onClick={() => deleteTask(task.id)}>
+            <IoCloseCircleOutline />
+          </span>
+        </div>
+      </div>
+      <div className="break"></div>
     </div>
   ));
 
