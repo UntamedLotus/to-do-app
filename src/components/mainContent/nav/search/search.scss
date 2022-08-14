@@ -44,3 +44,48 @@ button {
     text-align: center;
   }
 }
+
+@media (max-width: 59em) {
+  input {
+    padding: 8px;
+    padding-left: 12px;
+
+    font-size: 15px;
+    width: 20rem;
+  }
+
+  input:focus {
+    font-size: 15px;
+    width: 20rem;
+  }
+
+  button {
+    height: 2.1rem;
+    width: 2.1rem;
+  }
+}
+
+@media (max-width: 44em) {
+  input {
+    width: 16rem;
+  }
+
+  input:focus {
+    width: 16rem;
+  }
+
+  button {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+@media (max-width: 34em) {
+  input {
+    width: 18rem;
+  }
+
+  input:focus {
+    width: 18rem;
+  }
+}

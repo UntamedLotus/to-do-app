@@ -40,3 +40,22 @@
   width: 100%;
   background-color: #fff;
 }
+
+@media (max-width: 59em) {
+  .maincontent {
+    margin-top: 2.7rem;
+    width: 45rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .maincontent {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .maincontent {
+    width: 30rem;
+  }
+}

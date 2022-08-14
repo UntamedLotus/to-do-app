@@ -6,3 +6,15 @@
   justify-items: center;
   margin-top: 1.5rem;
 }
+
+@media (max-width: 44em) {
+  .main-nav {
+    margin-left: 1.2rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .main-nav {
+    grid-template-columns: 1fr;
+  }
+}

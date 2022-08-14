@@ -27,3 +27,40 @@
   font-size: 2rem;
   color: rgba(77, 32, 62);
 }
+
+.confetti {
+  width: 670px;
+  height: 500px;
+}
+
+@media (max-width: 44em) {
+  .card {
+    height: 25rem;
+    width: 30rem;
+  }
+
+  .closebtn {
+    left: 28.5rem;
+  }
+
+  .confetti {
+    width: 500px;
+    height: 430px;
+  }
+}
+
+@media (max-width: 44em) {
+  .card {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .closebtn {
+    left: 24rem;
+  }
+
+  .confetti {
+    width: 430px;
+    height: 430px;
+  }
+} ;

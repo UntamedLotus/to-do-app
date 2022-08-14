@@ -31,7 +31,7 @@ const ToDoList = () => {
   const card = () => {
     return (
       <div className="card">
-        {status && <Confetti width={670} height={500} />}
+        {status && <Confetti className="confetti" />}
         <h2>task completed</h2>
         <span className="closebtn" onClick={closeScreen}>
           <IoCloseCircleOutline />
