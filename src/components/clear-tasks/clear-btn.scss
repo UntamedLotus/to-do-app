@@ -1,0 +1,16 @@
+.clear-btn {
+  width: 25%;
+
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  font-weight: 700;
+  background-color: #f3dce1;
+
+  &:hover {
+    background-color: #feb1e0;
+    border: 3px solid #fe70c6;
+    color: #590036;
+  }
+}

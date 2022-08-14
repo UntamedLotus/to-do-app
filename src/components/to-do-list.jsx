@@ -1,6 +1,7 @@
 import React from "react";
 import MainContent from "./mainContent/mainContent";
 import Nav from "./mainContent/nav/nav";
+import ClearBtn from "./clear-tasks/clear-btn";
 
 import Confetti from "react-confetti";
 import { nanoid } from "nanoid";
@@ -77,6 +78,10 @@ const ToDoList = () => {
     setId("");
   };
 
+  const removeAll = () => {
+    setTasks([]);
+  };
+
   return (
     <div className="todolist">
       <Nav
@@ -94,6 +99,7 @@ const ToDoList = () => {
           tasks={tasks}
         />
       )}
+      {tasks.length > 0 && <ClearBtn removeAll={removeAll} />}
     </div>
   );
 };

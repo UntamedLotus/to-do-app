@@ -22,9 +22,11 @@ const MainContent = ({ tasks, deleteTask, completedtask }) => {
   ));
 
   return (
-    <div className="maincontent">
-      <div>{taskUI}</div>
-    </div>
+    tasks.length > 0 && (
+      <div className="maincontent">
+        <div>{taskUI}</div>
+      </div>
+    )
   );
 };
 
