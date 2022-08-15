@@ -49,10 +49,14 @@
   }
 }
 
-@media (max-width: 44em) {
+@media (max-width: 34em) {
   .card {
     height: 25rem;
     width: 25rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 
   .closebtn {
