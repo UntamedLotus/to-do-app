@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <ToDoList />
+      <p className="credits">@Ruttika ©2022</p>
     </div>
   );
 }

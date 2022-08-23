@@ -7,7 +7,10 @@ const MainContent = ({ tasks, deleteTask, completedtask }) => {
   const taskUI = tasks.map((task) => (
     <div>
       <div className="tasklist" key={task.id}>
-        <p>{task.taskName}</p>
+        <p>
+          {task.taskName.charAt(0).toUpperCase() +
+            task.taskName.slice(1).toLowerCase()}
+        </p>
         <div className="icon">
           <span className="btn-close">
             <IoCheckmarkCircleOutline onClick={() => completedtask(task.id)} />
