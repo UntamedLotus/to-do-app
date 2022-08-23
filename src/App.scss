@@ -5,8 +5,16 @@
 .credits {
   margin-top: 3rem;
   margin-right: 1.2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgb(104, 8, 72);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
   text-decoration: underline;
+}
+
+@media (max-width: 44em) {
+  .credits {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(104, 8, 72);
+  }
 }
